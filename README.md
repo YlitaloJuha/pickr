@@ -1,3 +1,4 @@
+![App preview](images/AppPreview.png)
 # Pickr.
 
 > The fastest way to clear burst shots and near-duplicates from your iPhone camera roll. 100% on-device.
