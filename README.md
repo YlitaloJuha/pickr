@@ -22,12 +22,12 @@ No photos, metadata, or identifiers ever leave your device.
 
 ## Features
 
-- Swipe a moment left to delete all of its photos, or right to skip it — both with a quick confirm prompt so nothing is lost by accident
+- Swipe a moment left to delete all of its photos, or right to keep the whole moment aside so it stops appearing — both with a quick confirm prompt so nothing happens by accident
 - Two ways to review a moment: a **grid** view for tap-to-keep, or a **swipe** view for one-photo-at-a-time decisions with a Kept/Removed toggle
 - Long-press any photo for a full-resolution peek
 - Time window presets: 10s / 30s / 1m / 3m, or slide to any value between 1 and 120 minutes
 - Scan the last 7, 14, or 30 days, your whole library, or a custom date range
-- Restore kept-aside photos anytime from the Kept view
+- Restore kept-aside photos anytime from **Settings → Kept moments**
 - Lifetime stats: photos deleted, space reclaimed, moments cleared
 
 ## Privacy
