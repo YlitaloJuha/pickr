@@ -26,7 +26,7 @@ Pickr. never reads the contents of photos for any purpose other than displaying 
 Pickr. uses `UserDefaults` (Apple's standard on-device preferences storage) to remember:
 
 - Your settings (time window, scan range, haptics preference)
-- A list of photo identifiers you chose to skip, so skipped moments do not reappear
+- A list of photo identifiers you chose to keep aside, so kept moments do not reappear for review
 - Aggregate lifetime stats (total photos deleted, storage reclaimed, moments cleared, first-use date)
 
 All of this data is stored only on your device and is removed when you uninstall the app.
