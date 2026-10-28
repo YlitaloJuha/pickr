@@ -6,7 +6,7 @@
 
 Pickr. groups near-duplicate photos by when they were taken, lets you tap the keepers, and sends the rest to Recently Deleted in one action. No accounts, no cloud, no AI.
 
-**App Store:** *coming soon*
+**App Store:** [Pickr. on the App Store](https://apps.apple.com/us/app/pickr/id6762475298)
 **Requires:** iPhone running iOS 18 or later.
 
 ---
