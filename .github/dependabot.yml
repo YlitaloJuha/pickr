@@ -1,0 +1,13 @@
+# Pickr. has no package dependencies, so only the GitHub Actions used by CI are kept up to date.
+# Actions are pinned by commit SHA; Dependabot updates the SHA and the version comment together.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
+    commit-message:
+      prefix: CI

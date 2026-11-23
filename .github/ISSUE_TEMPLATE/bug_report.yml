@@ -1,0 +1,73 @@
+name: Bug report
+description: Something in Pickr. doesn't work as it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! Two things first:
+        - **Don't attach your own photos**, or screenshots that show them. This issue is public. Describe the photos instead, or reproduce it with the synthetic photos in [`test-photos/`](https://github.com/YlitaloJuha/pickr/tree/main/test-photos).
+        - A security problem? Please don't open an issue: report it privately as [SECURITY.md](https://github.com/YlitaloJuha/pickr/blob/main/docs/SECURITY.md) says.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+      placeholder: "I kept two photos in a moment and tapped Delete, but the moment came back after…"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Tap Adjust and set Photos taken within to 3 min
+        2. Open the first moment
+        3. …
+  - type: input
+    id: pickr
+    attributes:
+      label: Pickr. version
+      description: Settings shows it at the bottom.
+      placeholder: "2.0 (100)"
+    validations:
+      required: true
+  - type: input
+    id: ios
+    attributes:
+      label: iOS version and device
+      placeholder: "iOS 27.1, iPhone 17"
+    validations:
+      required: true
+  - type: dropdown
+    id: library
+    attributes:
+      label: Roughly how many photos are in your library?
+      options:
+        - Under 1,000
+        - 1,000 – 10,000
+        - 10,000 – 50,000
+        - Over 50,000
+  - type: dropdown
+    id: access
+    attributes:
+      label: Photo access
+      options:
+        - Full Access
+        - Limited Access (only some photos)
+        - Not sure
+  - type: dropdown
+    id: icloud
+    attributes:
+      label: iCloud Photos
+      options:
+        - "On, Optimize Storage"
+        - "On, Download and Keep Originals"
+        - "Off"
+        - Not sure
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots (optional)
+      description: |
+        Only screenshots without your own photos in them, for example of Settings or an empty state, or of the app running on `test-photos/`. Crop or blur anything personal.

@@ -1,0 +1,148 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  # A weekly run scans the whole history for secrets; push and PR runs scan only their own
+  # commits (gitleaks-action decides by event). The macOS jobs skip scheduled runs.
+  schedule:
+    - cron: "23 4 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: true
+
+jobs:
+  policy:
+    name: policy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Policy checks
+        run: scripts/policy-check.sh
+
+  secrets:
+    name: secrets
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      # New commits on push and pull_request; the full history on schedule and manual runs.
+      # v3 runs on node24 (v2 was node20, which GitHub-hosted runners no longer have).
+      - name: gitleaks (new commits; full history when scheduled)
+        uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_ENABLE_COMMENTS: false
+
+  kit:
+    name: kit
+    if: github.event_name != 'schedule'
+    # Xcode 27.2 is on the xcode-27 image (public preview), not on macos-26.
+    runs-on: xcode-27
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Select Xcode 27.2
+        run: |
+          if [ ! -d /Applications/Xcode_27.2.app ]; then
+            echo "::error::Xcode 27.2 is not installed on this runner image."
+            ls -d /Applications/Xcode*.app
+            exit 1
+          fi
+          sudo xcode-select -s /Applications/Xcode_27.2.app/Contents/Developer
+          swift --version
+      - name: Test photos match the fixture timeline
+        run: swift scripts/make-test-photos.swift --check test-photos
+      - name: swift test (warnings are errors)
+        run: swift test --package-path PickrKit -Xswiftc -warnings-as-errors
+
+  app:
+    name: app
+    if: github.event_name != 'schedule'
+    runs-on: xcode-27
+    timeout-minutes: 45
+    # Allowed to fail while the xcode-27 image is a preview.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Select Xcode 27.2
+        run: sudo xcode-select -s /Applications/Xcode_27.2.app/Contents/Developer
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate project
+        run: xcodegen generate
+      # The generic destination covers both device families (iPhone and iPad).
+      - name: Build (unsigned, generic iOS Simulator)
+        run: >-
+          xcodebuild build
+          -project Pickr.xcodeproj
+          -scheme Pickr
+          -destination 'generic/platform=iOS Simulator'
+          CODE_SIGNING_ALLOWED=NO
+
+  sim:
+    name: sim (${{ matrix.device }})
+    if: github.event_name != 'schedule'
+    runs-on: xcode-27
+    timeout-minutes: 60
+    # Hosted and UI tests on iOS 27.2 simulators (ADAPTIVE §12.3). Advisory until they have
+    # been green for a while on the preview image.
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        device: ["iPhone 17", "iPad Pro 11-inch (M5)", "iPhone Duo"]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Select Xcode 27.2
+        run: sudo xcode-select -s /Applications/Xcode_27.2.app/Contents/Developer
+      - name: Install XcodeGen
+        run: brew install xcodegen
+      - name: Generate project
+        run: xcodegen generate
+      - name: Boot the simulator with the test photos and Photos access
+        env:
+          DEVICE: ${{ matrix.device }}
+        run: |
+          udid="$(xcrun simctl list devices available -j | python3 -c '
+          import json, os, sys
+          name = os.environ["DEVICE"]
+          for runtime, devices in json.load(sys.stdin)["devices"].items():
+              if runtime.endswith("iOS-27-2"):
+                  for d in devices:
+                      if d["name"] == name:
+                          print(d["udid"]); sys.exit(0)
+          sys.exit("no iOS 27.2 simulator named " + name)')"
+          echo "UDID=$udid" >> "$GITHUB_ENV"
+          xcrun simctl boot "$udid"
+          xcrun simctl bootstatus "$udid" -b
+          xcrun simctl addmedia "$udid" test-photos/*.jpg
+          xcrun simctl privacy "$udid" grant photos com.juha.Culler
+      - name: Test (PickrAppTests, PickrUITests)
+        run: >-
+          xcodebuild test
+          -project Pickr.xcodeproj
+          -scheme Pickr
+          -destination "id=$UDID"
+          -parallel-testing-enabled NO

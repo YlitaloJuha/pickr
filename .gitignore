@@ -1,0 +1,74 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode build artifacts
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.xcresult
+
+# Swift Package Manager
+.build/
+Package.pins
+Package.resolved
+.swiftpm/
+
+# CocoaPods / Carthage (unused, but future-proof)
+Pods/
+Carthage/Build/
+
+# Generated project (XcodeGen): regenerate from project.yml with `xcodegen generate`
+*.xcodeproj/
+
+# Archives & IPAs
+*.xcarchive
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Signing: never commit
+Config/Signing.local.xcconfig
+*.local.xcconfig
+*.p12
+*.p8
+AuthKey_*.p8
+*.cer
+*.certSigningRequest
+*.mobileprovision
+*.provisionprofile
+ExportOptions.plist
+.env
+.env.*
+
+# Fastlane (unused, future-proof)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+fastlane/.env*
+
+# Private release notes kept out of the public repo
+/private/
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude Code local state
+.claude/

@@ -1,0 +1,1713 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " · " : {
+      "comment" : "Separator between the parts of a subtitle."
+    },
+    "%@ later — same moment" : {
+      "comment" : "Help example, large text: the next photo joins the moment. The variable is a time, for example 20 sec."
+    },
+    "%@ later — too far apart" : {
+      "comment" : "Help example, large text: the next photo was taken too long after. The variable is a time, for example 3 min."
+    },
+    "%@ of %@" : {
+      "comment" : "Reading the library: progress. 1: photos read so far. 2: photos in the library.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ of %2$@"
+          }
+        }
+      }
+    },
+    "%@ to %@" : {
+      "comment" : "VoiceOver: a moment's time span. 1: first photo's time. 2: last photo's time.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ to %2$@"
+          }
+        }
+      }
+    },
+    "%@ to free up" : {
+      "comment" : "Adjust summary, second line: space to free, for example 32 MB.\nVoiceOver: space to free up, for example 4.2 MB."
+    },
+    "%@ · %@" : {
+      "comment" : "Moment card title in Kept. 1: the date, for example Apr 18, 2026. 2: the time span.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      }
+    },
+    "%@, %@" : {
+      "comment" : "VoiceOver value of the photo pager: the photo's description, then why it isn't sharp\nVoiceOver: the Clean Up button. 1: Clean Up 7 Moments. 2: Frees up to 32 MB.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@, %2$@"
+          }
+        }
+      }
+    },
+    "%lld min" : {
+      "comment" : "Photos taken within a custom number of minutes, for example 20 min."
+    },
+    "%lld minutes" : {
+      "comment" : "VoiceOver value of the custom time slider.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld minute"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld minutes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld moments" : {
+      "comment" : "Help example result: number of moments.\nMoments subtitle when no size is known yet. 1: number of moments.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld moment"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld moments"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld moments · %@ to free up" : {
+      "comment" : "Moments subtitle. 1: number of moments. 2: space freed by keeping one photo per moment, for example 32 MB.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld moment · %@ to free up"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld moments · %@ to free up"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld moments · %lld on its own" : {
+      "comment" : "Help example result. 1: number of moments. 2: number of photos left on their own.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@moments@ · %#@solo@"
+          },
+          "substitutions" : {
+            "moments" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moment"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moments"
+                    }
+                  }
+                }
+              }
+            },
+            "solo" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg on its own"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg on their own"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld moments · %lld photos" : {
+      "comment" : "Adjust summary. 1: number of moments. 2: number of photos in them.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@moments@ · %#@photos@"
+          },
+          "substitutions" : {
+            "moments" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moment"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moments"
+                    }
+                  }
+                }
+              }
+            },
+            "photos" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photo"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photos"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld moments · %lld photos · %@ to free up" : {
+      "comment" : "Adjust summary. 1: moments. 2: photos. 3: space to free, for example 32 MB.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@moments@ · %#@photos@ · %3$@ to free up"
+          },
+          "substitutions" : {
+            "moments" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moment"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moments"
+                    }
+                  }
+                }
+              }
+            },
+            "photos" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photo"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photos"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld moments · %lld photos · about %@ to free up" : {
+      "comment" : "Adjust summary. 1: moments. 2: photos. 3: estimated space, for example 32 MB, when some sizes are unknown.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%#@moments@ · %#@photos@ · about %3$@ to free up"
+          },
+          "substitutions" : {
+            "moments" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moment"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moments"
+                    }
+                  }
+                }
+              }
+            },
+            "photos" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photo"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photos"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld moments · about %@ to free up" : {
+      "comment" : "Moments subtitle. 1: number of moments. 2: estimated space, for example 32 MB, when some sizes are unknown.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld moment · about %@ to free up"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld moments · about %@ to free up"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld of %lld" : {
+      "comment" : "Kept moment subtitle in One by One: the photo's place in the moment. 1: position, 2: number of photos.\nReview subtitle in One by One: the photo's place in the moment. 1: position, 2: number of photos.\nReview subtitle: the moment's place in the queue. 1: position, 2: number of moments.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "%lld photos" : {
+      "comment" : "Kept moment subtitle in All: the number of photos.\nMoment card: number of photos in the moment.\nReview subtitle in All: the number of photos in the moment.\nVoiceOver chart value: a number of photos.\nVoiceOver: number of photos in a moment.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld photo"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld photos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld photos on these dates" : {
+      "comment" : "Pick Dates: number of photos between the first and last day.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld photo on these dates"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld photos on these dates"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld photos · %@ to free up" : {
+      "comment" : "Moment card. 1: number of photos. 2: space freed by keeping only the largest photo, for example 4.2 MB.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld photo · %@ to free up"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld photos · %@ to free up"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "%lld photos · about %@ to free up" : {
+      "comment" : "Moment card. 1: number of photos. 2: estimated space, for example 4.2 MB, when some sizes are unknown.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld photo · about %@ to free up"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld photos · about %@ to free up"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "+%lld" : {
+      "comment" : "Moment card: the number of photos not shown in the thumbnail strip."
+    },
+    ", " : {
+      "comment" : "Separator between the parts of a VoiceOver label."
+    },
+    "1 min" : {
+      "comment" : "Photos taken within: 1 minute."
+    },
+    "1 to 9" : {
+      "comment" : "VoiceOver: keyboard keys 1 to 9."
+    },
+    "1 – 9" : {
+      "comment" : "Keyboard keys 1 to 9, as printed."
+    },
+    "10 sec" : {
+      "comment" : "Photos taken within: 10 seconds."
+    },
+    "100% on-device" : {
+      "comment" : "Onboarding row title: everything stays on the device."
+    },
+    "2 Weeks" : {
+      "comment" : "Look back: the last 14 days."
+    },
+    "3 min" : {
+      "comment" : "Photos taken within: 3 minutes."
+    },
+    "30 sec" : {
+      "comment" : "Photos taken within: 30 seconds."
+    },
+    "A long stretch of time can find many moments." : {
+      "comment" : "Pick Dates: footer when the picked days span more than a year."
+    },
+    "A longer time finds fewer moments, with more photos in each" : {
+      "comment" : "Help bullet: effect of a longer time."
+    },
+    "A photo with no other photo close to it isn't part of any moment. It stays in your library, untouched." : {
+      "comment" : "Help: photos on their own."
+    },
+    "A shorter time finds more moments, with fewer photos in each" : {
+      "comment" : "Help bullet: effect of a shorter time."
+    },
+    "About" : {
+      "comment" : "Settings section header: about the app."
+    },
+    "Adjust" : {
+      "comment" : "Button that opens the Adjust sheet (how moments are found).\nEnd of the Moments list: opens Adjust (how moments are found).\nSettings section header: how moments are found (the same controls as the Adjust sheet).\nTitle of the sheet that changes how moments are found.\nToolbar button that opens Adjust (how moments are found)."
+    },
+    "Adjust updates the list as you go." : {
+      "comment" : "What's New row: changes in Adjust update the Moments list immediately."
+    },
+    "Adjust…" : {
+      "comment" : "Help: what Option-Command-A does (opens Adjust).\nMenu bar: open Adjust (how moments are found)."
+    },
+    "All" : {
+      "comment" : "Kept moment: see every photo of the moment at once.\nMenu bar: see every photo of the moment at once.\nReview: see every photo of the moment at once."
+    },
+    "All clean" : {
+      "comment" : "Moments tab with no moments left: title."
+    },
+    "All or One by One" : {
+      "comment" : "Help: what Command-1 and Command-2 do."
+    },
+    "All photos in this moment are favorites." : {
+      "comment" : "Footnote under a disabled Delete All.\nUnder a disabled Delete All."
+    },
+    "All time" : {
+      "comment" : "All clean: heading for the lifetime totals."
+    },
+    "Allow Photo Access" : {
+      "comment" : "Button that shows the iOS photo access prompt."
+    },
+    "Allow access to your photos" : {
+      "comment" : "Moments tab when photo access was never asked: title."
+    },
+    "Bigger moments" : {
+      "comment" : "Help heading: how to make moments bigger."
+    },
+    "Biggest First" : {
+      "comment" : "Sort menu: the moments that free up the most space first."
+    },
+    "Cancel" : {
+      "comment" : "Bulk delete dialog: keep the photos.\nBulk-delete dialog: keeps the photos."
+    },
+    "Changed your mind? Open **Photos** → **Albums** → **Recently Deleted** and choose the photos you want back. iOS keeps them for **30 days**." : {
+      "comment" : "Help: how to recover deleted photos in the Photos app. Photos, Albums and Recently Deleted are the Photos app's own names."
+    },
+    "Changes show up right away" : {
+      "comment" : "What's New row title: Adjust updates the list at once."
+    },
+    "Choose Photos" : {
+      "comment" : "Banner button that opens the system picker for the photos Pickr. can see."
+    },
+    "Choose a moment" : {
+      "comment" : "Kept, side by side: the detail column while no moment is open."
+    },
+    "Choose a moment in the list, or start at the top." : {
+      "comment" : "Start view beside the Moments list when no moment is open."
+    },
+    "Clean Up" : {
+      "comment" : "Menu bar: the menu with the review commands."
+    },
+    "Clean Up %lld" : {
+      "comment" : "Short form of Clean Up 7 Moments when space is tight. 1: number of moments."
+    },
+    "Clean Up %lld Moments" : {
+      "comment" : "Button that starts going through the moments. 1: number of moments.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Clean Up %lld Moment"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Clean Up %lld Moments"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Command 1, Command 2" : {
+      "comment" : "VoiceOver: the keyboard shortcuts Command-1 and Command-2."
+    },
+    "Command Comma" : {
+      "comment" : "VoiceOver: the keyboard shortcut Command-Comma."
+    },
+    "Command Delete" : {
+      "comment" : "VoiceOver: the keyboard shortcut Command-Delete."
+    },
+    "Command Down Arrow" : {
+      "comment" : "VoiceOver: the keyboard shortcut Command-Down Arrow."
+    },
+    "Command K" : {
+      "comment" : "VoiceOver: the keyboard shortcut Command-K."
+    },
+    "Command R" : {
+      "comment" : "VoiceOver: the keyboard shortcut Command-R."
+    },
+    "Command Up Arrow" : {
+      "comment" : "VoiceOver: the keyboard shortcut Command-Up Arrow."
+    },
+    "Command Z" : {
+      "comment" : "VoiceOver: the keyboard shortcut Command-Z."
+    },
+    "Continue" : {
+      "comment" : "Onboarding: go to the next step.\nWhat's New: close the sheet and start using the app."
+    },
+    "Couldn't delete the photos." : {
+      "comment" : "Error toast when a delete failed. Shown with a Try Again button.",
+      "extractionState" : "manual"
+    },
+    "Couldn't download from iCloud" : {
+      "comment" : "Photo pager: the full-quality photo couldn't be downloaded; a blurry preview is shown"
+    },
+    "Couldn't load this photo" : {
+      "comment" : "Photo pager: no image could be loaded for this photo"
+    },
+    "Couldn't reach iCloud to delete the photos." : {
+      "comment" : "Error toast when a delete failed for lack of network. Shown with a Try Again button.",
+      "extractionState" : "manual"
+    },
+    "Couldn't read your library" : {
+      "comment" : "Moments tab when reading the photo library failed: title."
+    },
+    "Date" : {
+      "comment" : "Pick Dates chart: the time axis."
+    },
+    "Delete %lld" : {
+      "comment" : "Review's main button, short form. 1: number of photos to delete."
+    },
+    "Delete %lld Photos" : {
+      "comment" : "Bulk delete dialog: confirm. 1: number of photos.\nBulk-delete dialog: confirms. 1: number of photos.\nMenu bar: delete the photos that aren't kept. 1: number of photos.\nReview's main button. 1: number of photos to delete.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld Photo"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld Photos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Delete %lld photos" : {
+      "comment" : "VoiceOver label of Review's Delete button. 1: number of photos.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld photo"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld photos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Delete %lld photos, frees up %@" : {
+      "comment" : "VoiceOver label of Review's Delete button. 1: number of photos, 2: a size.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld photo, frees up %@"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld photos, frees up %@"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Delete %lld photos, frees up about %@" : {
+      "comment" : "VoiceOver label of Review's Delete button when some sizes are unknown. 1: number of photos, 2: a size.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld photo, frees up about %@"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld photos, frees up about %@"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Delete All" : {
+      "comment" : "Moves the moment's photos to Recently Deleted (favorites are kept)."
+    },
+    "Delete All…" : {
+      "comment" : "Review ⋯ menu: delete every photo of the moment (favorites are kept)."
+    },
+    "Delete Photos" : {
+      "comment" : "Menu bar: Delete, while no photo would be deleted (disabled)."
+    },
+    "Delete all %lld photos in this moment?" : {
+      "comment" : "Bulk delete dialog title (20 or more photos). 1: number of photos.\nDialog before deleting 20 or more photos at once. 1: number of photos.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld photo in this moment?"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete all %lld photos in this moment?"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Delete or skip, and the next one is ready." : {
+      "comment" : "What's New row: after deleting or skipping, the next moment shows."
+    },
+    "Delete the photos you didn't keep" : {
+      "comment" : "Help: what Command-Delete does."
+    },
+    "Dismiss" : {
+      "comment" : "VoiceOver action that hides a toast message.\nVoiceOver: hides the limited-access banner for now."
+    },
+    "Don't see a moment?" : {
+      "comment" : "End of the Moments list, before the Adjust link."
+    },
+    "Done: %lld moments · %lld photos · %@ freed up." : {
+      "comment" : "Summary toast at the end of a cleanup. Variables: moments cleaned up, photos moved to Recently Deleted, space freed up (for example 1.2 GB).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done: %#@moments@ · %#@photos@ · %3$@ freed up."
+          },
+          "substitutions" : {
+            "moments" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moment"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moments"
+                    }
+                  }
+                }
+              }
+            },
+            "photos" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photo"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photos"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Done: %lld moments · %lld photos · about %@ freed up." : {
+      "comment" : "Summary toast at the end of a cleanup. Variables: moments cleaned up, photos moved to Recently Deleted, a lower bound of the space freed up (for example 1.2 GB).",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done: %#@moments@ · %#@photos@ · about %3$@ freed up."
+          },
+          "substitutions" : {
+            "moments" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moment"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moments"
+                    }
+                  }
+                }
+              }
+            },
+            "photos" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photo"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photos"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Done: %lld moments · %lld photos." : {
+      "comment" : "Summary toast at the end of a cleanup when the size is unknown. The first variable is the number of moments cleaned up, the second the number of photos moved to Recently Deleted.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done: %#@moments@ · %#@photos@."
+          },
+          "substitutions" : {
+            "moments" : {
+              "argNum" : 1,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moment"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moments"
+                    }
+                  }
+                }
+              }
+            },
+            "photos" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photo"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photos"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Drag across the chart, or set the first and last day." : {
+      "comment" : "Pick Dates: footer under the chart."
+    },
+    "Esc" : {
+      "comment" : "Keyboard key name for Escape, as printed on the key."
+    },
+    "Escape" : {
+      "comment" : "VoiceOver: the Escape key."
+    },
+    "Everything" : {
+      "comment" : "Look back: the whole library."
+    },
+    "Example, photos taken within %@: %lld moments, %lld photos on their own." : {
+      "comment" : "VoiceOver: help example. 1: a time, for example 1 min. 2: number of moments. 3: photos on their own.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Example, photos taken within %1$@: %#@moments@, %#@solo@."
+          },
+          "substitutions" : {
+            "moments" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moment"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moments"
+                    }
+                  }
+                }
+              }
+            },
+            "solo" : {
+              "argNum" : 3,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photo on its own"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg photos on their own"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Example, photos taken within %@: %lld moments." : {
+      "comment" : "VoiceOver: help example. 1: a time, for example 1 min. 2: number of moments.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Example, photos taken within %1$@: %#@moments@."
+          },
+          "substitutions" : {
+            "moments" : {
+              "argNum" : 2,
+              "formatSpecifier" : "lld",
+              "variations" : {
+                "plural" : {
+                  "one" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moment"
+                    }
+                  },
+                  "other" : {
+                    "stringUnit" : {
+                      "state" : "translated",
+                      "value" : "%arg moments"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Favorites are kept." : {
+      "comment" : "Footnote under Delete All when the moment has favorites.\nUnder Delete All when the moment has protected favorites."
+    },
+    "Favorites start as kept and Delete All skips them." : {
+      "comment" : "Settings footer under Never delete favorites."
+    },
+    "First day" : {
+      "comment" : "Pick Dates: the first day to look for moments."
+    },
+    "Frees up %@" : {
+      "comment" : "Second line of the Delete button. 1: a size, for example 6.8 MB."
+    },
+    "Frees up about %@" : {
+      "comment" : "Second line of the Delete button when some sizes are unknown. 1: a size."
+    },
+    "Frees up to %@" : {
+      "comment" : "Under Clean Up 7 Moments. 1: space freed by keeping one photo per moment, for example 32 MB."
+    },
+    "Frees up to about %@" : {
+      "comment" : "Under Clean Up 7 Moments, when some sizes are unknown. 1: estimated space, for example 32 MB."
+    },
+    "Get Deleted Photos Back" : {
+      "comment" : "Settings row: opens the help about recovering photos from Recently Deleted."
+    },
+    "Get deleted photos back" : {
+      "comment" : "Help heading: recovering deleted photos."
+    },
+    "Go back" : {
+      "comment" : "Help: what the Escape key does."
+    },
+    "Help" : {
+      "comment" : "Settings section header: help and feedback."
+    },
+    "Hides these moments." : {
+      "comment" : "VoiceOver hint of the open Photos you picked header."
+    },
+    "How Pickr. Finds Moments" : {
+      "comment" : "Adjust: link to the help page about how moments are found.\nSettings row: opens the help page about how moments are found.\nTitle of the help page about how moments are found."
+    },
+    "How far back" : {
+      "comment" : "Help heading: how far back Pickr. looks for moments."
+    },
+    "In All, drag sideways across photos to keep or unmark several at once. With a trackpad or mouse, point at a photo and click the circle to keep it, or secondary-click a moment or photo for more choices." : {
+      "comment" : "Help: drag across photos, and pointer use."
+    },
+    "It will show up in Moments again." : {
+      "comment" : "VoiceOver hint of Show Moment Again. Also the toast after Show Again took a moment or a photo out of the Kept tab (shown with an Undo button): keep both the same."
+    },
+    "Just now" : {
+      "comment" : "All clean: heading for what was done since the app opened."
+    },
+    "Keep" : {
+      "comment" : "One by One: mark the photo to keep.\nReview: mark a photo to keep.\nVoiceOver action in the photo pager: keep this photo\nVoiceOver label of the Keep toggle in One by One."
+    },
+    "Keep All" : {
+      "comment" : "Help: what Command-K does (the Keep All button).\nKeeps every photo of the moment and moves it to Kept.\nMenu bar: keep the whole moment and go to the next one.\nReview ⋯ menu: keep the whole moment and go to the next one.\nReview's main button, short form, when every photo is kept."
+    },
+    "Keep All & Next" : {
+      "comment" : "Review's main button when every photo is kept: keep the moment and go on."
+    },
+    "Keep Photo" : {
+      "comment" : "Menu bar: keep or unmark the current photo (Space)."
+    },
+    "Keep all and go to the next moment" : {
+      "comment" : "VoiceOver label of Keep All & Next."
+    },
+    "Keep or unmark photos 1 to 9" : {
+      "comment" : "Help: what the number keys do."
+    },
+    "Keep or unmark the photo" : {
+      "comment" : "Help: what the Space key does."
+    },
+    "Keeps the photo." : {
+      "comment" : "VoiceOver hint of a photo tile in Review."
+    },
+    "Kept" : {
+      "comment" : "Kept moment subtitle: the moment was kept with Keep All.\nMenu bar: show the Kept tab.\nOne by One: the photo is marked to keep.\nTab: the moments and photos you kept.\nTitle of the Kept tab."
+    },
+    "Kept has its own tab" : {
+      "comment" : "What's New row title: the new Kept tab."
+    },
+    "Keyboard and pointer" : {
+      "comment" : "Help heading: keyboard shortcuts and trackpad or mouse use."
+    },
+    "Last day" : {
+      "comment" : "Pick Dates: the last day to look for moments."
+    },
+    "Leaves this moment for later." : {
+      "comment" : "VoiceOver hint of Review's Skip button."
+    },
+    "Left and Right Arrows" : {
+      "comment" : "VoiceOver: the left and right arrow keys."
+    },
+    "Look back" : {
+      "comment" : "Adjust: section title and picker label for how far back to look for moments.\nSettings row: how far back Pickr. looks for moments. Opens Adjust."
+    },
+    "Looking back further can find many more moments." : {
+      "comment" : "Adjust: footer under Look back when Everything is chosen."
+    },
+    "Moment kept." : {
+      "comment" : "Toast after Keep All moved a whole moment to the Kept tab, so it won't come back for cleanup. Shown with an Undo button.",
+      "extractionState" : "manual"
+    },
+    "Moments" : {
+      "comment" : "Menu bar: show the Moments tab.\nOnboarding row title: what a moment is.\nTab: the moments to clean up.\nTitle of the Moments tab and its screen."
+    },
+    "Moments done" : {
+      "comment" : "All clean: moments finished since the app opened.\nSettings, Your progress: moments cleaned up."
+    },
+    "Moments or Kept" : {
+      "comment" : "Help: what Option-Command-1 and Option-Command-2 do (the two tabs)."
+    },
+    "Moments you keep" : {
+      "comment" : "Help heading: what happens to kept moments."
+    },
+    "Moments you keep show up here and won’t come back for cleanup." : {
+      "comment" : "Kept tab empty state: explanation."
+    },
+    "Moments you keep show up in **Kept** and won't come back for cleanup. Tap **Show Again** there to put one back in Moments." : {
+      "comment" : "Help: kept moments. Bold words are the tab and button names."
+    },
+    "Moments you kept" : {
+      "comment" : "Kept tab: section of moments kept with Keep All."
+    },
+    "Month" : {
+      "comment" : "Look back: the last 30 days.\nVoiceOver chart axis: months."
+    },
+    "More" : {
+      "comment" : "Review: the menu with more actions for this moment.\nVoiceOver label of the Kept moment's ⋯ menu.\nVoiceOver label of the Kept tab's ⋯ menu."
+    },
+    "Moved %lld photos to Recently Deleted" : {
+      "comment" : "Toast after a delete when the size is unknown. The variable is the photo count.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Moved %lld photo to Recently Deleted"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Moved %lld photos to Recently Deleted"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Moved %lld photos to Recently Deleted · %@ freed up" : {
+      "comment" : "Toast after a delete. The first variable is the photo count, the second the space freed, for example 4.2 MB.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Moved %lld photo to Recently Deleted · %@ freed up"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Moved %lld photos to Recently Deleted · %@ freed up"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Moved %lld photos to Recently Deleted · about %@ freed up" : {
+      "comment" : "Toast after a delete. The first variable is the photo count, the second a lower bound of the space freed, for example 4.2 MB.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Moved %lld photo to Recently Deleted · about %@ freed up"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Moved %lld photos to Recently Deleted · about %@ freed up"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Never delete favorites" : {
+      "comment" : "Settings switch: favorite and rated photos are always kept."
+    },
+    "Newest First" : {
+      "comment" : "Sort menu: newest moments first, in day sections."
+    },
+    "No accounts, no cloud, no AI." : {
+      "comment" : "Onboarding row: privacy promise."
+    },
+    "No moments" : {
+      "comment" : "Adjust summary when the current choices find no moments."
+    },
+    "No moments in the last 2 weeks." : {
+      "comment" : "All clean: Look back is 2 Weeks."
+    },
+    "No moments in the last month." : {
+      "comment" : "All clean: Look back is Month."
+    },
+    "No moments in the last week." : {
+      "comment" : "All clean: Look back is Week."
+    },
+    "No moments in your library." : {
+      "comment" : "All clean: Look back is Everything."
+    },
+    "No moments on the dates you picked." : {
+      "comment" : "All clean: Look back is a range of dates the user picked."
+    },
+    "No photos yet." : {
+      "comment" : "Pick Dates: shown instead of the chart when the library has no photos."
+    },
+    "Nothing in your photos was changed." : {
+      "comment" : "Moments tab when reading the photo library failed: reassurance."
+    },
+    "Nothing kept yet" : {
+      "comment" : "Kept tab empty state: title."
+    },
+    "One by One" : {
+      "comment" : "Kept moment: see the photos one at a time.\nMenu bar: see the photos one at a time.\nReview: see the photos one at a time."
+    },
+    "Open" : {
+      "comment" : "Moment context menu: opens the moment to pick what to keep."
+    },
+    "Open One by One" : {
+      "comment" : "Help: what the Return key does."
+    },
+    "Open Settings" : {
+      "comment" : "Button that opens Pickr.'s page in the iOS Settings app.\nOpens the Settings app, where photo access can be turned on."
+    },
+    "Opens Mail." : {
+      "comment" : "VoiceOver hint of Send Feedback."
+    },
+    "Opens in your web browser." : {
+      "comment" : "VoiceOver hint of a Settings row that opens a web page."
+    },
+    "Opens the moment so you can pick what to keep." : {
+      "comment" : "VoiceOver hint on a moment card."
+    },
+    "Opens the moment." : {
+      "comment" : "VoiceOver hint of a kept moment card."
+    },
+    "Option Command 1, Option Command 2" : {
+      "comment" : "VoiceOver: the keyboard shortcuts Option-Command-1 and Option-Command-2."
+    },
+    "Option Command A" : {
+      "comment" : "VoiceOver: the keyboard shortcut Option-Command-A."
+    },
+    "Other" : {
+      "comment" : "Adjust: label of the custom time slider."
+    },
+    "Other…" : {
+      "comment" : "Photos taken within: choose any number of minutes."
+    },
+    "Photo" : {
+      "comment" : "VoiceOver label of a photo tile."
+    },
+    "Photo %lld of %lld" : {
+      "comment" : "VoiceOver: a photo's position in its moment. 1: position, 2: number of photos.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Photo %1$lld of %2$lld"
+          }
+        }
+      }
+    },
+    "Photos" : {
+      "comment" : "Pick Dates chart: the photo count axis.\nVoiceOver label of the single-photo pager; its value describes the photo in view"
+    },
+    "Photos deleted" : {
+      "comment" : "All clean: photos moved to Recently Deleted.\nSettings, Your progress: photos deleted with Pickr."
+    },
+    "Photos per month" : {
+      "comment" : "VoiceOver title of the Pick Dates chart with monthly bars."
+    },
+    "Photos per year" : {
+      "comment" : "VoiceOver title of the Pick Dates chart with yearly bars."
+    },
+    "Photos taken close together become one moment. A longer time makes bigger moments." : {
+      "comment" : "Adjust: footer under Photos taken within."
+    },
+    "Photos taken seconds apart, like a burst or a few tries at the same shot." : {
+      "comment" : "Onboarding row: what a moment is."
+    },
+    "Photos taken within" : {
+      "comment" : "Adjust: section title and picker label for the time between photos in one moment.\nSettings row: how close in time photos must be to form a moment. Opens Adjust."
+    },
+    "Photos you kept while deleting the rest of their moment." : {
+      "comment" : "Kept tab: footer of the Photos you picked section."
+    },
+    "Photos you picked" : {
+      "comment" : "Kept tab: section of photos kept while the rest of their moment was deleted."
+    },
+    "Photos you picked, %lld photos" : {
+      "comment" : "VoiceOver label of the Photos you picked section header. 1: number of photos.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Photos you picked, %lld photo"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Photos you picked, %lld photos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Photos you show again come back to Moments only if they were taken close to another photo." : {
+      "comment" : "Kept tab: footnote under the list."
+    },
+    "Pick Dates" : {
+      "comment" : "Title of the screen that picks a first and last day."
+    },
+    "Pick Dates, %@" : {
+      "comment" : "VoiceOver: the row that opens Pick Dates with the saved dates. The variable is the dates, for example Apr 1 – 18, 2026."
+    },
+    "Pick Dates…" : {
+      "comment" : "Look back: choose a first and last day."
+    },
+    "Picked by you" : {
+      "comment" : "Kept moment subtitle: the photos were kept while the rest of their moment was deleted."
+    },
+    "Pickr. can see only some of your photos." : {
+      "comment" : "Banner shown while photo access is limited."
+    },
+    "Pickr. isn't allowed to delete photos. Check Photos access in Settings." : {
+      "comment" : "Error toast when a delete failed because Photos access was withdrawn. Shown with a Try Again button.",
+      "extractionState" : "manual"
+    },
+    "Pickr. looks at when each photo was taken to find moments, and deletes only what you say. Choose Full Access to see your whole library, or pick some photos." : {
+      "comment" : "Moments tab when photo access was never asked: explanation before the iOS prompt."
+    },
+    "Pickr. looks at your photos in the order you took them. When a photo was taken soon enough after the one before it, the two belong to the same moment." : {
+      "comment" : "Help: how photos become a moment."
+    },
+    "Pickr. needs your photos to find moments." : {
+      "comment" : "Moments tab when photo access is off: title.\nShown while photo access is off."
+    },
+    "Pickr. runs entirely on your device. No accounts, no cloud, no AI." : {
+      "comment" : "Settings footer: the privacy promise."
+    },
+    "Previous Moment" : {
+      "comment" : "Help: what Command-Up Arrow does.\nMenu bar: go back to the moment listed above this one."
+    },
+    "Previous or next photo" : {
+      "comment" : "Help: what the left and right arrow keys do."
+    },
+    "Privacy Policy" : {
+      "comment" : "Settings row: opens the privacy policy web page."
+    },
+    "Reading your library…" : {
+      "comment" : "Adjust summary while the photo library is still being read.\nMoments tab while the photo library is read for the first time."
+    },
+    "Refresh" : {
+      "comment" : "Help: what Command-R does.\nMenu bar: look for new and changed photos."
+    },
+    "Return" : {
+      "comment" : "Keyboard key name, as printed on the key."
+    },
+    "Safety" : {
+      "comment" : "Settings section header: protecting photos from deletion."
+    },
+    "See what you kept, and show it again any time." : {
+      "comment" : "What's New row: what the Kept tab does."
+    },
+    "Send Feedback" : {
+      "comment" : "Settings row: writes an email to the developer in Mail."
+    },
+    "Set First day and Last day to change the dates." : {
+      "comment" : "VoiceOver hint on the Pick Dates chart."
+    },
+    "Settings" : {
+      "comment" : "Title of the Settings sheet.\nToolbar button that opens Settings."
+    },
+    "Settings…" : {
+      "comment" : "Help: what Command-Comma does (opens Settings).\nMenu bar: open Settings."
+    },
+    "Shorter or longer?" : {
+      "comment" : "Help heading: choosing a shorter or longer time."
+    },
+    "Show Again" : {
+      "comment" : "Kept card swipe action: put this moment back in Moments.\nKept: put this moment back in Moments."
+    },
+    "Show All Again" : {
+      "comment" : "Show All Again confirmation: the confirming button."
+    },
+    "Show All Again…" : {
+      "comment" : "Kept ⋯ menu: put every kept moment back in Moments (asks first)."
+    },
+    "Show Moment Again" : {
+      "comment" : "Kept moment: put every photo of this moment back in Moments."
+    },
+    "Show Photo Again" : {
+      "comment" : "Kept moment: put the photo shown back in Moments.\nKept moment: put this photo back in Moments."
+    },
+    "Show Tips Again" : {
+      "comment" : "Settings button: the hints show again."
+    },
+    "Show all %lld moments in Moments again?" : {
+      "comment" : "Show All Again confirmation title. 1: the number of kept moments.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Show %lld moment in Moments again?"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Show all %lld moments in Moments again?"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Shows the iOS question about photo access." : {
+      "comment" : "VoiceOver hint of Allow Photo Access in onboarding."
+    },
+    "Shows the photo." : {
+      "comment" : "VoiceOver hint of a photo tile in a kept moment."
+    },
+    "Shows these moments." : {
+      "comment" : "VoiceOver hint of the closed Photos you picked header."
+    },
+    "Skip" : {
+      "comment" : "Help: what Command-Down Arrow does (the Skip button).\nMenu bar: leave this moment for later and go to the next one.\nReview: leave this moment for later and go to the next one."
+    },
+    "Sort" : {
+      "comment" : "Title of the Moments sort menu.\nToolbar menu that orders the Moments list."
+    },
+    "Source Code" : {
+      "comment" : "Settings row: opens Pickr.'s source code on GitHub."
+    },
+    "Space" : {
+      "comment" : "Keyboard key name, as printed on the key."
+    },
+    "Space freed up" : {
+      "comment" : "All clean: storage freed by the deleted photos.\nSettings, Your progress: storage freed up by deleting."
+    },
+    "Space keeps · ⌘⌫ deletes · ⌘↓ skips" : {
+      "comment" : "Start view: keyboard shortcuts for going through moments."
+    },
+    "Starts with the first moment." : {
+      "comment" : "VoiceOver hint on the Clean Up button."
+    },
+    "Swipe left to delete a whole moment, or right to keep all of it." : {
+      "comment" : "Tip on the first moment in the Moments list: its swipe actions."
+    },
+    "Swipe to decide" : {
+      "comment" : "Tip title on the first moment in the Moments list."
+    },
+    "Swipe up on a photo to keep it." : {
+      "comment" : "Tip in Review, One by One: the swipe-up gesture."
+    },
+    "Swipe up to keep" : {
+      "comment" : "Tip title in Review, One by One."
+    },
+    "Tap **Adjust** on the Moments screen and pick a longer time under **Photos taken within** — 10 sec, 30 sec, 1 min, 3 min — or choose **Other…** for up to 2 hours." : {
+      "comment" : "Help: where to change the time between photos. Bold words are button and section names."
+    },
+    "Tap the photos to keep" : {
+      "comment" : "Review's bottom bar while no photo is kept."
+    },
+    "Tap the photos you want to keep. The rest go to Recently Deleted." : {
+      "comment" : "Onboarding row: tapping marks the photos to keep; the others are deleted.\nTip on the first photo in Review. Recently Deleted is the album name in the Photos app."
+    },
+    "Tap to keep" : {
+      "comment" : "Onboarding row title: how to choose photos.\nTip title on the first photo in Review."
+    },
+    "The next moment opens by itself" : {
+      "comment" : "What's New row title: Review moves on by itself."
+    },
+    "These photos were already deleted or hidden" : {
+      "comment" : "Toast when the user deletes photos that another device or app already deleted or hid.",
+      "extractionState" : "manual"
+    },
+    "They can come back for cleanup." : {
+      "comment" : "Show All Again confirmation: explanation."
+    },
+    "They go to Recently Deleted, where you can get them back for 30 days." : {
+      "comment" : "Bulk delete dialog message (20 or more photos).\nBulk-delete dialog message."
+    },
+    "They go to Recently Deleted, where you can get them back for 30 days. Favorites are kept." : {
+      "comment" : "Bulk-delete dialog message when the moment has protected favorites."
+    },
+    "They will show up in Moments again." : {
+      "comment" : "Toast after Show All Again took every photo out of the Kept tab.",
+      "extractionState" : "manual"
+    },
+    "This moment changed" : {
+      "comment" : "Toast when the photo library changed during review and the moment on screen no longer exists; review moves on.",
+      "extractionState" : "manual"
+    },
+    "Tips will show again." : {
+      "comment" : "Settings footer after Show Tips Again was tapped."
+    },
+    "To delete" : {
+      "comment" : "VoiceOver value of a photo that will be deleted.\nVoiceOver value of a photo tile that will be deleted."
+    },
+    "Too many photos to delete at once." : {
+      "comment" : "Error toast when Photos refused a delete request as too large. Shown with a Try Again button.",
+      "extractionState" : "manual"
+    },
+    "Try Again" : {
+      "comment" : "Button that reads the photo library again after a failure.\nToast button that repeats an action that failed."
+    },
+    "Under **Look back** in **Adjust**, choose Week, 2 Weeks, Month or Everything, or **Pick Dates…** for any stretch of time. Looking back further can find many more moments." : {
+      "comment" : "Help: choosing how far back to look. Bold words are section and button names."
+    },
+    "Undo" : {
+      "comment" : "Help: what Command-Z does.\nMenu bar: undo the last change (the toast's Undo).\nToast button that reverses the action the toast describes."
+    },
+    "Unkeep" : {
+      "comment" : "Review: unmark a kept photo.\nVoiceOver action in the photo pager: stop keeping this photo"
+    },
+    "Unkeeps the photo." : {
+      "comment" : "VoiceOver hint of a kept photo tile in Review."
+    },
+    "Updating…" : {
+      "comment" : "Moments subtitle while the library is checked for changes."
+    },
+    "Use These Dates" : {
+      "comment" : "Pick Dates: confirm button that looks for moments between the picked days."
+    },
+    "Using Pickr. since" : {
+      "comment" : "Settings, Your progress: the day Pickr. was first used."
+    },
+    "Version" : {
+      "comment" : "Settings row: the app's version number."
+    },
+    "Vibration" : {
+      "comment" : "Settings switch: small vibrations when you keep, delete or change things."
+    },
+    "View" : {
+      "comment" : "Kept moment: show this photo in One by One.\nKept: open this moment.\nReview: show this photo in One by One.\nShows this photo in One by One.\nVoiceOver label of Review's All / One by One picker.\nVoiceOver label of the Kept moment's All / One by One picker."
+    },
+    "Week" : {
+      "comment" : "Look back: the last 7 days."
+    },
+    "Welcome to Pickr." : {
+      "comment" : "Onboarding: the first screen's title."
+    },
+    "What about single photos?" : {
+      "comment" : "Help heading: photos that aren't part of a moment."
+    },
+    "What's New in Pickr." : {
+      "comment" : "Title of the sheet that shows what changed since version 1."
+    },
+    "With a keyboard, Space keeps a photo, Command Delete deletes, Command Down Arrow skips." : {
+      "comment" : "VoiceOver reading of the start view's keyboard shortcuts."
+    },
+    "With a keyboard:" : {
+      "comment" : "Help: introduces the list of keyboard shortcuts."
+    },
+    "Within %@" : {
+      "comment" : "Help example title. The variable is a time, for example 1 min."
+    },
+    "Year" : {
+      "comment" : "VoiceOver chart axis: years."
+    },
+    "You can turn on photo access in Settings." : {
+      "comment" : "Moments tab when photo access is off: explanation."
+    },
+    "Your photo library isn't available right now." : {
+      "comment" : "Error toast when a delete failed because the photo library was offline or switching. Shown with a Try Again button.",
+      "extractionState" : "manual"
+    },
+    "Your progress" : {
+      "comment" : "Settings section header: lifetime numbers."
+    },
+    "about %@ to free up" : {
+      "comment" : "Adjust summary, second line: estimated space, for example 32 MB, when some sizes are unknown.\nVoiceOver: estimated space to free up, for example 4.2 MB."
+    },
+    "favorite" : {
+      "comment" : "VoiceOver: the photo is a favorite or rated (protected)."
+    },
+    "includes favorites" : {
+      "comment" : "VoiceOver: the moment has protected (favorite or rated) photos."
+    },
+    "kept" : {
+      "comment" : "VoiceOver: the photo is marked to keep."
+    },
+    "← →" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘," : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘1  ⌘2" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘A" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘K" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘R" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘Z" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘↑" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘↓" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘⌫" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌥⌘1  ⌥⌘2" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌥⌘A" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    }
+  },
+  "version" : "1.0"
+}

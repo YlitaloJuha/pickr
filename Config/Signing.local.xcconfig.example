@@ -1,0 +1,6 @@
+// Copy to Config/Signing.local.xcconfig (git-ignored), or run scripts/bootstrap.sh.
+// Your Apple Developer team ID, from developer.apple.com > Membership.
+DEVELOPMENT_TEAM = YOUR_TEAM_ID
+
+// Forks: use your own bundle ID so automatic signing works.
+// PICKR_BUNDLE_ID = com.example.pickr

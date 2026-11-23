@@ -1,0 +1,25 @@
+name: Feature request
+description: An idea for Pickr. One per issue, please.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Asked already? Add 👍 to that issue's first post instead of opening a new one.
+        Pickr. stays on-device: ideas that need a server, an account, analytics or AI are out of scope.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What's hard or missing today, and when you run into it.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: How Pickr. could help. Sketches welcome; please no screenshots of your own photos.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you do now instead

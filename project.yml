@@ -1,0 +1,119 @@
+# XcodeGen spec for Pickr. Generate the project with `scripts/bootstrap.sh` or `xcodegen generate`.
+# Pickr.xcodeproj is generated and git-ignored: change this file, never the project.
+#
+# Signing and the bundle ID come only from Config/Shared.xcconfig (+ the git-ignored
+# Config/Signing.local.xcconfig). Do not add bundleIdPrefix, DEVELOPMENT_TEAM or
+# PRODUCT_BUNDLE_IDENTIFIER for the app here: XcodeGen would write them into the
+# project, where they override the xcconfig.
+name: Pickr
+
+options:
+  deploymentTarget:
+    iOS: "27.0"
+  xcodeVersion: "27.2"
+  createIntermediateGroups: true
+  developmentLanguage: en
+
+configFiles:
+  Debug: Config/Shared.xcconfig
+  Release: Config/Shared.xcconfig
+
+packages:
+  PickrKit:
+    path: PickrKit
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    SWIFT_DEFAULT_ACTOR_ISOLATION: MainActor
+    SWIFT_APPROACHABLE_CONCURRENCY: YES
+    MARKETING_VERSION: "2.0"
+    CURRENT_PROJECT_VERSION: "9"
+    TARGETED_DEVICE_FAMILY: "1,2" # iPhone, iPhone Duo and iPad (ADAPTIVE §12.1, D1/D12)
+    ENABLE_USER_SCRIPT_SANDBOXING: YES
+    SWIFT_EMIT_LOC_STRINGS: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
+    STRING_CATALOG_GENERATE_SYMBOLS: NO
+    ASSETCATALOG_COMPILER_GENERATE_ASSET_SYMBOLS: NO
+    GCC_C_LANGUAGE_STANDARD: gnu17
+    CLANG_CXX_LANGUAGE_STANDARD: "gnu++20"
+  configs:
+    Release:
+      SWIFT_COMPILATION_MODE: wholemodule
+      SWIFT_OPTIMIZATION_LEVEL: "-O"
+      VALIDATE_PRODUCT: YES
+
+targets:
+  Pickr:
+    type: application
+    platform: iOS
+    sources:
+      - path: Pickr
+      # The 40 synthetic photos for demo mode (-PickrDemo YES, Pickr/App/Demo/), which
+      # records the README demos. Debug only: Release excludes the folder (policy check 22b).
+      - path: test-photos
+        type: folder
+        buildPhase: resources
+    dependencies:
+      - package: PickrKit
+        product: PickrCore
+      - package: PickrKit
+        product: PickrPersistence
+      - package: PickrKit
+        product: PickrModels
+    settings:
+      base:
+        PRODUCT_NAME: Pickr
+        INFOPLIST_FILE: Pickr/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_PREVIEWS: YES
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+      configs:
+        Release:
+          EXCLUDED_SOURCE_FILE_NAMES: test-photos
+
+  PickrAppTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: PickrAppTests
+    dependencies:
+      - target: Pickr
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: "$(PICKR_BUNDLE_ID).Tests"
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Pickr.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pickr"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+
+  PickrUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: PickrUITests
+    dependencies:
+      - target: Pickr
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: "$(PICKR_BUNDLE_ID).UITests"
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Pickr
+        # XCTestCase's initializers are nonisolated; UI test methods opt in with @MainActor.
+        SWIFT_DEFAULT_ACTOR_ISOLATION: nonisolated
+
+schemes:
+  Pickr:
+    build:
+      targets:
+        Pickr: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - PickrAppTests
+        - PickrUITests
+    archive:
+      config: Release

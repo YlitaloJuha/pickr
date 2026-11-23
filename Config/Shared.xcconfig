@@ -1,0 +1,17 @@
+// Shared build settings for every target and configuration (tracked).
+//
+// Signing comes from Signing.local.xcconfig, which git ignores. Copy
+// Signing.local.xcconfig.example (scripts/bootstrap.sh does this) and put your
+// team there. Never pick a team in Xcode's Signing UI: it writes the team into
+// the generated project.
+
+CODE_SIGN_STYLE = Automatic
+DEVELOPMENT_TEAM =
+
+// The official App Store build keeps this identifier. It keys the App Store
+// record, the app container and the UserDefaults domain, so it never changes.
+// Forks override it in Signing.local.xcconfig.
+PICKR_BUNDLE_ID = com.juha.Culler
+PRODUCT_BUNDLE_IDENTIFIER = $(PICKR_BUNDLE_ID)
+
+#include? "Signing.local.xcconfig"
