@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pickr. 2.0 icon concepts</title>
+<style>
+  :root { color-scheme: light dark; --bg: #f2f2f7; --card: #fff; --ink: #1d1d1f; --sub: #6e6e73; --blue: #0088ff; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #000; --card: #1c1c1e; --ink: #f5f5f7; --sub: #98989d; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 40px 24px 80px; background: var(--bg); color: var(--ink);
+         font: 16px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
+  main { max-width: 1480px; margin: 0 auto; }
+  h1 { font-size: 34px; letter-spacing: -0.5px; margin: 0 0 6px; }
+  .lede { color: var(--sub); margin: 0 0 32px; max-width: 760px; }
+  section { background: var(--card); border-radius: 22px; padding: 28px; margin-bottom: 24px;
+            display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: start; }
+  section > img.flat { width: 220px; height: 220px; }
+  h2 { margin: 0 0 4px; font-size: 24px; letter-spacing: -0.3px; }
+  h2 small { color: var(--blue); font-weight: 600; font-size: 15px; margin-left: 8px; }
+  p { margin: 0 0 14px; color: var(--sub); max-width: 760px; }
+  img.modes { width: 100%; max-width: 1432px; border-radius: 14px; display: block; }
+  ul { margin: 0 0 16px; padding-left: 20px; color: var(--sub); }
+  code { font: 13px ui-monospace, SFMono-Regular, Menlo, monospace; }
+  footer { color: var(--sub); font-size: 13px; margin-top: 32px; }
+  @media (max-width: 760px) { section { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>Pickr. 2.0 — app icon concepts</h1>
+  <p class="lede">Three original drafts drawn from scratch for the 2.0 rebuild (the shipped icon is an exported SF Symbol and can't be open-sourced or kept). Each one is a layered Icon Composer document. The strips are Apple's own <code>ictool</code> renders in all six iOS appearances, plus actual home-screen sizes.</p>
+
+  <section>
+    <img class="flat" src="concept-a-stack.svg" alt="Concept A: blue photo stack on white with a keeper badge">
+    <div>
+      <h2>A · Stack <small>brand continuity</small></h2>
+      <p>Keeps today's look: a blue photo stack on white. The front card carries the blue selection badge you tap in the app, so the stack now says "this one's a keeper". Three layers: fanned back cards, the front card, and a glass badge on top.</p>
+      <img class="modes" src="concept-a-stack.png" alt="Concept A in light, dark, clear and tinted appearances">
+    </div>
+  </section>
+
+  <section>
+    <img class="flat" src="concept-b-pick.svg" alt="Concept B: a three-by-three grid with the middle tile lifted and checked">
+    <div>
+      <h2>B · Pick <small>bolder</small></h2>
+      <p>A moment shown as a contact sheet. One photo is lifted out of the grid and checked; the eight faded tiles are "the rest". It mirrors the Review grid, reads at every size, and turns into a clean monochrome glyph in clear and tinted modes.</p>
+      <img class="modes" src="concept-b-pick.png" alt="Concept B in light, dark, clear and tinted appearances">
+    </div>
+  </section>
+
+  <section>
+    <img class="flat" src="concept-c-keep-clear.svg" alt="Concept C: a white keeper card with a check while faded cards slide away">
+    <div>
+      <h2>C · Keep &amp; clear <small>bolder</small></h2>
+      <p>Motion in a still image: the keeper card stands upright with a blue check while the rest slide off and fade. A deeper blue-to-indigo background makes it the most striking of the three on a home screen.</p>
+      <img class="modes" src="concept-c-keep-clear.png" alt="Concept C in light, dark, clear and tinted appearances">
+    </div>
+  </section>
+
+  <footer>
+    Sources: <code>images/icon-source/concept-*.icon</code> (open in Icon Composer) and the flat <code>concept-*.svg</code> previews. All shapes are plain rounded rectangles, circles and a computed check stroke; nothing is exported or traced from SF Symbols.<br>
+    © 2026 Juha Ylitalo. The Pickr. name, icon and artwork are not covered by the MIT licence.
+  </footer>
+</main>
+</body>
+</html>

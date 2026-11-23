@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Pickr. app icon concept, original artwork drawn for Pickr. 2.0.
+     Copyright (c) 2026 Juha Ylitalo. Not covered by the MIT licence. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<path d="M432 362H592A70 70 0 0 1 662 432V592A70 70 0 0 1 592 662H432A70 70 0 0 1 362 592V432A70 70 0 0 1 432 362ZM448.7 495.1A34 34 0 0 0 400.6 543.2L458.3 600.9A34 34 0 0 0 506.7 600.6L628.4 475.8A34 34 0 0 0 579.7 428.3L482.1 528.5L448.7 495.1Z" fill-rule="evenodd" fill="#FFFFFF"/>
+</svg>

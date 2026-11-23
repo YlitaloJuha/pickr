@@ -1,0 +1,10 @@
+<!-- Pickr. brand artwork. Copyright (c) 2026 Juha Ylitalo. Not covered by the MIT licence. -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<rect width="1024" height="1024" rx="230" fill="#FFFFFF"/>
+<path d="M364 213H648A68 68 0 0 1 716 281V675A68 68 0 0 1 648 743H364A68 68 0 0 1 296 675V281A68 68 0 0 1 364 213Z" transform="rotate(-13 506 1010)" fill="#0088FF" fill-opacity="0.32"/>
+<path d="M364 213H648A68 68 0 0 1 716 281V675A68 68 0 0 1 648 743H364A68 68 0 0 1 296 675V281A68 68 0 0 1 364 213Z" transform="rotate(11 506 1010)" fill="#0088FF" fill-opacity="0.58"/>
+<path d="M364 239H648A68 68 0 0 1 716 307V701A68 68 0 0 1 648 769H364A68 68 0 0 1 296 701V307A68 68 0 0 1 364 239Z" fill="#0088FF"/>
+<path d="M536 739A140 140 0 1 1 816 739A140 140 0 1 1 536 739Z" fill="#FFFFFF"/>
+<path d="M558 739A118 118 0 1 1 794 739A118 118 0 1 1 558 739Z" fill="#0088FF"/>
+<path d="M635.7 729.3A25 25 0 0 0 600.3 764.7L637.3 801.7A25 25 0 0 0 672.9 801.5L750.9 721.5A25 25 0 0 0 715.1 686.5L654.8 748.4L635.7 729.3Z" fill="#FFFFFF"/>
+</svg>

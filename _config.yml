@@ -1,0 +1,20 @@
+# GitHub Pages (legacy build from main, /). Only README.md (the App Store Support
+# page), privacy.md (the App Store Privacy Policy page) and images/ are published.
+# Do not add .nojekyll: README.md must keep rendering as the site index.
+exclude:
+  - Pickr
+  - PickrKit
+  - PickrAppTests
+  - PickrUITests
+  - Config
+  - scripts
+  - test-photos
+  - docs
+  - images/icon-source
+  - CLAUDE.md
+  - project.yml
+  - LICENSE
+  - .github
+  - "*.swift"
+  - "*.xcconfig"
+  - "*.example"
