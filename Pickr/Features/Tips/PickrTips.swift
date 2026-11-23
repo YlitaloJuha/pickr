@@ -62,6 +62,11 @@ enum PickrTips {
             DemoServices.configureTips()
             return
         }
+        // UI tests: tips would cover what the tests tap, and XCUITest can't close a TipKit
+        // popover reliably (Apple's recommended approach for UI tests).
+        if ProcessInfo.processInfo.arguments.contains("-PickrHideTips") {
+            Tips.hideAllTipsForTesting()
+        }
         #endif
         // Fails only if called twice; the first configuration stays in effect.
         try? Tips.configure([

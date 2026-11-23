@@ -66,6 +66,9 @@ public nonisolated enum LoadPhase: Equatable, Sendable {
     @ObservationIgnored private(set) var handledEvents = 0
     @ObservationIgnored private var regroupScheduled = false
     @ObservationIgnored private var regroupTask: Task<Void, Never>?
+    /// The index is in but its moments aren't grouped yet: `phase` turns `.ready` only once the
+    /// regroup lands, so the list never shows "All clean" for an instant before its moments.
+    @ObservationIgnored private var readyAfterRegroup = false
     @ObservationIgnored private var lookup = MomentLookup.empty
 
     @ObservationIgnored private var hasStarted = false
@@ -242,8 +245,19 @@ public nonisolated enum LoadPhase: Equatable, Sendable {
         apply(output)
     }
 
+    private func markReadyAfterRegroup() {
+        if phase != .ready { readyAfterRegroup = true }
+    }
+
     private func apply(_ output: MomentOutput) {
         appliedRegroups += 1
+        defer {
+            if readyAfterRegroup {
+                readyAfterRegroup = false
+                phase = .ready
+                updateRefreshing()
+            }
+        }
         lookup = output.lookup
         sizeQueue = output.sizeQueue
         sizeCursor = 0
@@ -410,11 +424,11 @@ public nonisolated enum LoadPhase: Equatable, Sendable {
         index = records
         if snapshot.isComplete {
             indexBusy = false
-            phase = .ready
+            markReadyAfterRegroup()
             schedulePrune()
         } else {
             indexBusy = true
-            if !records.isEmpty { phase = .ready }
+            if !records.isEmpty { markReadyAfterRegroup() }
         }
         regroup()
     }

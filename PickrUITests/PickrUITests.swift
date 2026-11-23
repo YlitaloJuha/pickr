@@ -163,7 +163,7 @@ final class PickrUITests: XCTestCase {
     @MainActor
     private func launchApp() -> XCUIApplication {
         let app = XCUIApplication()
-        app.launchArguments += ["-settings.scanRangePreset", "all"]
+        app.launchArguments += ["-settings.scanRangePreset", "all", "-PickrHideTips"]
         app.launch()
         return app
     }
@@ -186,14 +186,7 @@ final class PickrUITests: XCTestCase {
         if app.staticTexts["What's New in Pickr."].waitForExistence(timeout: 3) {
             app.buttons["Continue"].tap()
         }
-        // The first-run "Swipe to decide" tip is a popover: it takes the next tap and covers
-        // the title. Close it (its own close button, inside the app; never system UI).
-        let tip = app.staticTexts["Swipe to decide"]
-        if tip.waitForExistence(timeout: 3) {
-            let close = app.popovers.buttons.firstMatch
-            if close.exists { close.tap() } else { app.buttons["Close"].firstMatch.tap() }
-            _ = tip.waitForNonExistence(timeout: 3)
-        }
+        // Tips are hidden in UI tests (-PickrHideTips): XCUITest can't close TipKit popovers reliably.
     }
 
     /// The Review tile whose VoiceOver label starts "Photo <position> of".
