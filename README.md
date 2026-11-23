@@ -36,13 +36,6 @@ One sunset, eleven shots. The kids jumping off the dock, a burst of thirty. Your
 
 Pickr. turns that around. It puts every burst in its own moment, you tap the keepers, and the rest go to Recently Deleted, so nothing is lost for 30 days.
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="images/demo/hero.webp">
-    <img alt="Pickr. on an iPhone: the Moments list scrolls over blurred photos, the five-photo sunset moment opens, two photos are tapped as keepers, Delete 3 Photos is tapped, and the next moment slides in with a toast saying the photos moved to Recently Deleted" src="images/demo/hero-light.webp" width="260">
-  </picture>
-</p>
-
 ## How it works
 
 1. Pickr. looks at when each photo was taken.
