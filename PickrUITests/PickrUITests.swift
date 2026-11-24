@@ -38,12 +38,8 @@ final class PickrUITests: XCTestCase {
 
         let cleanUp = app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", "Clean Up 7 Moments")).firstMatch
         XCTAssertTrue(cleanUp.waitForExistence(timeout: 30), "The test photos should make 7 moments")
-        // A sheet that is still closing (What's New) can swallow the first tap.
         let reviewHint = app.staticTexts["Tap the photos to keep"]
-        for _ in 0..<3 where !reviewHint.exists {
-            if cleanUp.isHittable { cleanUp.tap() }
-            _ = reviewHint.waitForExistence(timeout: 4)
-        }
+        openReview(with: cleanUp, until: reviewHint)
 
         // Review opens in All with nothing kept.
         XCTAssertTrue(reviewHint.waitForExistence(timeout: 10))
@@ -65,7 +61,7 @@ final class PickrUITests: XCTestCase {
     func testCoreLoopInDemoMode() throws {
         let app = XCUIApplication()
         app.launchArguments += ["-PickrDemo", "YES"]
-        app.launch()
+        launch(app)
         let marker = app.descendants(matching: .any).matching(identifier: "pickr.demo-mode").firstMatch
         guard marker.waitForExistence(timeout: 15) else {
             app.terminate()
@@ -75,9 +71,9 @@ final class PickrUITests: XCTestCase {
 
         let cleanUp = app.buttons.matching(NSPredicate(format: "label BEGINSWITH %@", "Clean Up 7 Moments")).firstMatch
         XCTAssertTrue(cleanUp.waitForExistence(timeout: 30), "The demo photos make 7 moments")
-        cleanUp.tap()
-
-        XCTAssertTrue(app.staticTexts["Tap the photos to keep"].waitForExistence(timeout: 10))
+        let reviewHint = app.staticTexts["Tap the photos to keep"]
+        openReview(with: cleanUp, until: reviewHint)
+        XCTAssertTrue(reviewHint.waitForExistence(timeout: 10))
         let firstPhoto = photoTile(app, position: 1)
         XCTAssertTrue(firstPhoto.waitForExistence(timeout: 10))
         firstPhoto.tap()
@@ -170,8 +166,26 @@ final class PickrUITests: XCTestCase {
     private func launchApp() -> XCUIApplication {
         let app = XCUIApplication()
         app.launchArguments += ["-settings.scanRangePreset", "all", "-PickrHideTips"]
-        app.launch()
+        launch(app)
         return app
+    }
+
+    /// Launches and waits for the app to come to the front: a busy CI simulator (the iPad
+    /// especially) can take well over the usual few seconds, and a query sent before then hangs.
+    @MainActor
+    private func launch(_ app: XCUIApplication) {
+        app.launch()
+        XCTAssertTrue(app.wait(for: .runningForeground, timeout: 60), "The app should come to the front")
+    }
+
+    /// Taps Clean Up until Review shows. A sheet that is still closing (What's New) can swallow
+    /// the first tap, and on a slow simulator the button may not be hittable yet.
+    @MainActor
+    private func openReview(with cleanUp: XCUIElement, until reviewHint: XCUIElement) {
+        for _ in 0..<4 where !reviewHint.exists {
+            if cleanUp.isHittable { cleanUp.tap() }
+            _ = reviewHint.waitForExistence(timeout: 5)
+        }
     }
 
     /// Welcome → Continue → Photo access → Continue. Access must be granted before the run

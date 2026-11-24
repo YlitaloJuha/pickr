@@ -38,7 +38,7 @@ xcodebuild build -project Pickr.xcodeproj -scheme Pickr \
 
 `scripts/verify.sh all` runs the policy checks, the package tests and the unsigned build in one go; `PICKR_STRICT=1 scripts/verify.sh all` also fails on compiler warnings, as reviews expect.
 
-CI (`.github/workflows/ci.yml`) runs the policy checks, a [gitleaks](https://github.com/gitleaks/gitleaks) secret scan of the new commits, the package tests, an unsigned app build and (advisory for now) the hosted and UI tests on iPhone, iPad and iPhone Duo simulators, for every push to `main` and every pull request. A weekly run scans the full history for secrets.
+CI (`.github/workflows/ci.yml`) runs the policy checks, a [gitleaks](https://github.com/gitleaks/gitleaks) secret scan of the new commits, the package tests, an unsigned app build and (advisory for now) the hosted and UI tests on iPhone, iPad and iPhone Duo simulators (a failed test gets one retry, since the hosted simulators are sometimes slow), for every push to `main` and every pull request. A weekly run scans the full history for secrets.
 
 ## Code rules
 
