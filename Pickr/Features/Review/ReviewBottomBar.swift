@@ -63,6 +63,8 @@ struct ReviewBottomBar: ToolbarContent {
     let onKeepAll: () -> Void
     let onDeleteAll: () -> Void
     let onConfirmDeleteAll: (ReviewBulkDelete) -> Void
+    /// The top of the bar's buttons in window coordinates, for One by One's filmstrip.
+    let onTopChange: (CGFloat) -> Void
 
     var body: some ToolbarContent {
         ToolbarItem(placement: .bottomBar) {
@@ -90,6 +92,7 @@ struct ReviewBottomBar: ToolbarContent {
             }
             .disabled(!state.canMoveOn)
             .accessibilityHint(Text("Leaves this moment for later.", comment: "VoiceOver hint of Review's Skip button."))
+            .onGeometryChange(for: CGFloat.self) { $0.frame(in: .global).minY } action: { onTopChange($0) }
         }
         if state.main != .none {
             ToolbarSpacer(.fixed, placement: .bottomBar)
