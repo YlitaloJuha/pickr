@@ -470,6 +470,9 @@
         }
       }
     },
+    "Photo access" : {
+      "comment" : "Moments tab when photo access was never asked: title."
+    },
     "← →" : {
       "comment" : "A keyboard shortcut as printed in menus and on keys.",
       "shouldTranslate" : false
@@ -583,12 +586,6 @@
     "All time" : {
       "comment" : "All clean: heading for the lifetime totals."
     },
-    "Allow access to your photos" : {
-      "comment" : "Moments tab when photo access was never asked: title."
-    },
-    "Allow Photo Access" : {
-      "comment" : "Button that shows the iOS photo access prompt."
-    },
     "Bigger moments" : {
       "comment" : "Help heading: how to make moments bigger."
     },
@@ -667,7 +664,7 @@
       "comment" : "VoiceOver: the keyboard shortcut Command-Z."
     },
     "Continue" : {
-      "comment" : "Onboarding: go to the next step.\nWhat's New: close the sheet and start using the app."
+      "comment" : "Onboarding: go to the next step.\nButton that shows the iOS photo access prompt.\nWhat's New: close the sheet and start using the app."
     },
     "Couldn't delete the photos." : {
       "comment" : "Error toast when a delete failed. Shown with a Try Again button.",
@@ -1457,7 +1454,7 @@
       "comment" : "Error toast when a delete failed because Photos access was withdrawn. Shown with a Try Again button.",
       "extractionState" : "manual"
     },
-    "Pickr. looks at when each photo was taken to find moments, and deletes only what you say. Choose Full Access to see your whole library, or pick some photos." : {
+    "Pickr. looks at when each photo was taken to find moments, and deletes only what you say. Next, iOS asks which photos Pickr. can see. You can change this any time in Settings." : {
       "comment" : "Moments tab when photo access was never asked: explanation before the iOS prompt."
     },
     "Pickr. looks at your photos in the order you took them. When a photo was taken soon enough after the one before it, the two belong to the same moment." : {
@@ -1550,7 +1547,7 @@
       "comment" : "Settings button: the hints show again."
     },
     "Shows the iOS question about photo access." : {
-      "comment" : "VoiceOver hint of Allow Photo Access in onboarding."
+      "comment" : "VoiceOver hint of Continue on the photo access step of onboarding."
     },
     "Shows the photo." : {
       "comment" : "VoiceOver hint of a photo tile in a kept moment."

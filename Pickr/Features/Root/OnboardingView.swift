@@ -1,10 +1,10 @@
 import PickrModels
 import SwiftUI
 
-/// First run (§3.3 S1, ADAPTIVE S1, COPY.md): Welcome, then Allow Photo Access. It is the root
+/// First run (§3.3 S1, ADAPTIVE S1, COPY.md): Welcome, then Photo access. It is the root
 /// content, so the tabs don't exist yet.
 ///
-/// - The iOS permission prompt appears only when the person taps **Allow Photo Access**.
+/// - The iOS permission prompt appears only when the person taps **Continue** on the photo access step.
 ///   Whatever they answer, onboarding is done and the tabs show; no access appears there as
 ///   the Moments tab's "Pickr. needs your photos" state.
 /// - A centred column of at most 540 pt; the one prominent button sits in the bottom bar, at
@@ -140,13 +140,13 @@ private struct AccessStep: View {
                     .hiddenInCompactHeight()
                 // The same words as the Moments tab's primer (MomentsStates), so they read the
                 // same if access is ever reset.
-                Text("Allow access to your photos", comment: "Moments tab when photo access was never asked: title.")
+                Text("Photo access", comment: "Moments tab when photo access was never asked: title.")
                     .font(.largeTitle.bold())
                     .multilineTextAlignment(.center)
                     .accessibilityAddTraits(.isHeader)
                     .padding(.bottom, Theme.Spacing.medium)
                 Text(
-                    "Pickr. looks at when each photo was taken to find moments, and deletes only what you say. Choose Full Access to see your whole library, or pick some photos.",
+                    "Pickr. looks at when each photo was taken to find moments, and deletes only what you say. Next, iOS asks which photos Pickr. can see. You can change this any time in Settings.",
                     comment: "Moments tab when photo access was never asked: explanation before the iOS prompt."
                 )
                 .font(.body)
@@ -155,11 +155,11 @@ private struct AccessStep: View {
             }
         } action: {
             BottomActionButton(
-                title: Text("Allow Photo Access", comment: "Button that shows the iOS photo access prompt."),
+                title: Text("Continue", comment: "Onboarding: go to the next step."),
                 isEnabled: !isRequesting,
                 action: onAllow
             )
-            .accessibilityHint(Text("Shows the iOS question about photo access.", comment: "VoiceOver hint of Allow Photo Access in onboarding."))
+            .accessibilityHint(Text("Shows the iOS question about photo access.", comment: "VoiceOver hint of Continue on the photo access step of onboarding."))
         }
     }
 }
@@ -289,7 +289,7 @@ private struct AccessArt: View {
     }
 }
 
-#Preview("Allow Photo Access") {
+#Preview("Photo access") {
     RootPreviewHost(.newUser) {
         OnboardingView(step: .access)
     }
@@ -301,7 +301,7 @@ private struct AccessArt: View {
     }
 }
 
-#Preview("Allow Photo Access, large text, dark") {
+#Preview("Photo access, large text, dark") {
     RootPreviewHost(.newUser) {
         OnboardingView(step: .access)
     }

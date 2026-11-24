@@ -12,7 +12,7 @@ import SwiftUI
 
 /// Who is opening the app in a root preview.
 nonisolated enum RootPreviewScenario: Hashable, Sendable {
-    /// A fresh install: onboarding, photo access not asked yet. Allow Photo Access grants it.
+    /// A fresh install: onboarding, photo access not asked yet. Continue grants it.
     case newUser
     /// A returning 2.0 user with full access: the tabs and seven moments.
     case returning

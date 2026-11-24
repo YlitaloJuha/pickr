@@ -98,13 +98,13 @@ struct MomentsStates: View {
     private var primer: some View {
         ContentUnavailableView {
             Label {
-                Text("Allow access to your photos", comment: "Moments tab when photo access was never asked: title.")
+                Text("Photo access", comment: "Moments tab when photo access was never asked: title.")
             } icon: {
                 Image(systemName: "photo.on.rectangle.angled")
             }
         } description: {
             Text(
-                "Pickr. looks at when each photo was taken to find moments, and deletes only what you say. Choose Full Access to see your whole library, or pick some photos.",
+                "Pickr. looks at when each photo was taken to find moments, and deletes only what you say. Next, iOS asks which photos Pickr. can see. You can change this any time in Settings.",
                 comment: "Moments tab when photo access was never asked: explanation before the iOS prompt."
             )
         } actions: {
@@ -112,7 +112,7 @@ struct MomentsStates: View {
                 // A user action that must finish even if this view goes away.
                 Task { await library.requestAccess() }
             } label: {
-                Text("Allow Photo Access", comment: "Button that shows the iOS photo access prompt.")
+                Text("Continue", comment: "Onboarding: go to the next step.")
             }
             .buttonStyle(.borderedProminent)
             .buttonBorderShape(.capsule)
