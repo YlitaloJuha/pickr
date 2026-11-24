@@ -53,8 +53,7 @@ Moments are listed by day, newest first, or with the biggest ones at the top. Ea
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="images/screens/framed/moments-dark.png">
-    <img alt="The Moments list: moments grouped by day, each card with its time, photo count, space to free up and thumbnails, with Clean Up 7 Moments above the tabs" src="images/screens/framed/moments.png" width="200">
+    <img alt="The Moments list: dog photos grouped by day, each card with its time, photo count, space to free up and thumbnails, with Clean Up 4 Moments above the tabs" src="images/screens/framed/moments.png" width="200">
   </picture>
 </p>
 
@@ -64,12 +63,10 @@ See the whole moment at once and tap the photos you want: a blue check marks eac
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="images/screens/framed/review-grid-dark.png">
-    <img alt="The sunset moment in the All grid: two photos have blue checks, three have trash badges, and the button reads Delete 3 Photos, Frees up 7.2 MB" src="images/screens/framed/review-grid.png" width="200">
+    <img alt="A moment of ten dog photos in the All grid: two have blue checks, eight have trash badges, and the button reads Delete 8 Photos, Frees up 26.1 MB" src="images/screens/framed/review-grid.png" width="200">
   </picture>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="images/screens/framed/review-single-dark.png">
-    <img alt="The same moment One by One: the first photo large, a strip of thumbnails and a Keep button" src="images/screens/framed/review-single.png" width="200">
+    <img alt="The same moment One by One: a spaniel on a hilltop shown large, a strip of thumbnails and a Keep button" src="images/screens/framed/review-single.png" width="200">
   </picture>
 </p>
 
@@ -79,8 +76,7 @@ Tap **Adjust** to choose how close together photos need to be: **Photos taken wi
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="images/screens/framed/adjust-dark.png">
-    <img alt="The Adjust sheet: Photos taken within set to 3 min, Look back Everything, and a live count of 3 moments and 40 photos" src="images/screens/framed/adjust.png" width="200">
+    <img alt="The Adjust sheet: Photos taken within set to 1 min, Look back Everything, and a live count of 4 moments and 26 photos" src="images/screens/framed/adjust.png" width="200">
   </picture>
 </p>
 
@@ -90,8 +86,7 @@ Moments you keep go to the **Kept** tab and won't come back for cleanup. The pho
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="images/screens/framed/kept-dark.png">
-    <img alt="The Kept tab: Moments you kept and Photos you picked" src="images/screens/framed/kept.png" width="200">
+    <img alt="A kept moment of four dog photos with a Show Moment Again button" src="images/screens/framed/kept.png" width="200">
   </picture>
 </p>
 

@@ -174,15 +174,14 @@ final class PickrUITests: XCTestCase {
         return app
     }
 
-    /// Welcome → Continue → Allow Photo Access. Access must be granted before the run
+    /// Welcome → Continue → Photo access → Continue. Access must be granted before the run
     /// (`simctl privacy … grant photos`), so iOS shows no prompt; the tests never answer one.
     @MainActor
     private func passOnboardingIfNeeded(_ app: XCUIApplication) {
         guard app.staticTexts["Welcome to Pickr."].waitForExistence(timeout: 5) else { return }
         app.buttons["Continue"].tap()
-        let allow = app.buttons["Allow Photo Access"]
-        if allow.waitForExistence(timeout: 5) {
-            allow.tap()
+        if app.staticTexts["Photo access"].waitForExistence(timeout: 5) {
+            app.buttons["Continue"].tap()
         }
     }
 

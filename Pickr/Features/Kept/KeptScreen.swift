@@ -103,7 +103,7 @@ struct KeptScreen: View {
         .frame(maxHeight: .infinity)
     }
 
-    /// Access is off (Open Settings), or was never asked (Allow Photo Access shows the iOS prompt).
+    /// Access is off (Open Settings), or was never asked (Continue shows the iOS prompt).
     private func noAccess(canAsk: Bool) -> some View {
         ContentUnavailableView {
             Label {
@@ -117,7 +117,7 @@ struct KeptScreen: View {
                     // A user action that must finish even if this view goes away.
                     Task { await library.requestAccess() }
                 } label: {
-                    Text("Allow Photo Access", comment: "Button that shows the iOS photo access prompt.")
+                    Text("Continue", comment: "Onboarding: go to the next step.")
                 }
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.capsule)
