@@ -25,6 +25,8 @@ struct ReviewSingle: View {
     /// Keep or unkeep the photo at this index (swipe up, the Keep toggle, VoiceOver), with
     /// the keep haptic.
     let onKeep: (Int) -> Void
+    /// The top of the bottom bar's buttons in window coordinates, or `nil` while unknown.
+    let bottomBarTop: CGFloat?
 
     @Environment(SettingsModel.self) private var settings
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
@@ -32,6 +34,9 @@ struct ReviewSingle: View {
     @Namespace private var glassNamespace
 
     private let swipeTip = SwipeUpKeepTip()
+    /// Extra room under the filmstrip where the bottom bar floats over the content without
+    /// reserving safe area (the open iPhone Duo's detail column); 0 elsewhere.
+    @State private var lift: CGFloat = 0
 
     var body: some View {
         let photos = moment.photos
@@ -86,10 +91,24 @@ struct ReviewSingle: View {
                     }
                 }
                 .toastsStayAbove(.top)
+                .onGeometryChange(for: CGFloat.self) { $0.frame(in: .global).maxY } action: { maxY in
+                    updateLift(rowBottom: maxY)
+                }
                 .padding(.horizontal, Theme.Spacing.large)
-                .padding(.bottom, Theme.Spacing.small)
+                .padding(.bottom, Theme.Spacing.small + lift)
                 .transition(reduceMotion ? .opacity : .opacity.combined(with: .move(edge: .bottom)))
             }
         }
+    }
+
+    /// Raises the row until it clears the bar's buttons. The row is measured with the current
+    /// lift applied, so the lift settles at exactly the overlap and drops back when there is none.
+    private func updateLift(rowBottom: CGFloat) {
+        guard let bottomBarTop else {
+            if lift != 0 { lift = 0 }
+            return
+        }
+        let needed = max(0, lift + rowBottom - (bottomBarTop - Theme.Spacing.small))
+        if abs(needed - lift) > 0.5 { lift = needed }
     }
 }

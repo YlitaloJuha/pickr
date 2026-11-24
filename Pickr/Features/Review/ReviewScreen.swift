@@ -54,6 +54,8 @@ struct ReviewScreen: View {
     @State private var gridFocus = ScrollFocus<PhotoID>()
     @State private var tapTipDone = false
     @State private var swipeTipDone = false
+    /// The top of the bottom bar's buttons, for One by One's filmstrip (`ReviewSingle.lift`).
+    @State private var bottomBarTop: CGFloat?
 
     var body: some View {
         @Bindable var session = session
@@ -112,7 +114,8 @@ struct ReviewScreen: View {
                 onSkip: session.skip,
                 onKeepAll: keepAll,
                 onDeleteAll: requestDeleteAll,
-                onConfirmDeleteAll: confirmDeleteAll
+                onConfirmDeleteAll: confirmDeleteAll,
+                onTopChange: { bottomBarTop = $0 }
             )
         }
         // The tab bar comes back as soon as Review starts closing (the router has let go of the
@@ -195,7 +198,8 @@ struct ReviewScreen: View {
                         swipeTipDone = true
                         SwipeUpKeepTip().invalidate(reason: .actionPerformed)
                     }
-                }
+                },
+                bottomBarTop: chromeHidden ? nil : bottomBarTop
             )
             .transition(.opacity)
         }

@@ -4,6 +4,20 @@
     " · " : {
       "comment" : "Separator between the parts of a subtitle."
     },
+    ", " : {
+      "comment" : "Separator between the parts of a VoiceOver label."
+    },
+    "%@ · %@" : {
+      "comment" : "Moment card title in Kept. 1: the date, for example Apr 18, 2026. 2: the time span.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@"
+          }
+        }
+      }
+    },
     "%@ later — same moment" : {
       "comment" : "Help example, large text: the next photo joins the moment. The variable is a time, for example 20 sec."
     },
@@ -34,17 +48,6 @@
     },
     "%@ to free up" : {
       "comment" : "Adjust summary, second line: space to free, for example 32 MB.\nVoiceOver: space to free up, for example 4.2 MB."
-    },
-    "%@ · %@" : {
-      "comment" : "Moment card title in Kept. 1: the date, for example Apr 18, 2026. 2: the time span.",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "%1$@ · %2$@"
-          }
-        }
-      }
     },
     "%@, %@" : {
       "comment" : "VoiceOver value of the photo pager: the photo's description, then why it isn't sharp\nVoiceOver: the Clean Up button. 1: Clean Up 7 Moments. 2: Frees up to 32 MB.",
@@ -398,29 +401,6 @@
         }
       }
     },
-    "%lld photos on these dates" : {
-      "comment" : "Pick Dates: number of photos between the first and last day.",
-      "localizations" : {
-        "en" : {
-          "variations" : {
-            "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "%lld photo on these dates"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "%lld photos on these dates"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "%lld photos · %@ to free up" : {
       "comment" : "Moment card. 1: number of photos. 2: space freed by keeping only the largest photo, for example 4.2 MB.",
       "localizations" : {
@@ -467,11 +447,78 @@
         }
       }
     },
+    "%lld photos on these dates" : {
+      "comment" : "Pick Dates: number of photos between the first and last day.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld photo on these dates"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "%lld photos on these dates"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "← →" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
     "+%lld" : {
       "comment" : "Moment card: the number of photos not shown in the thumbnail strip."
     },
-    ", " : {
-      "comment" : "Separator between the parts of a VoiceOver label."
+    "⌘," : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘↑" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘↓" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘⌫" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘1  ⌘2" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘K" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘R" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌘Z" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌥⌘1  ⌥⌘2" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "⌥⌘A" : {
+      "comment" : "A keyboard shortcut as printed in menus and on keys.",
+      "shouldTranslate" : false
+    },
+    "1 – 9" : {
+      "comment" : "Keyboard keys 1 to 9, as printed."
     },
     "1 min" : {
       "comment" : "Photos taken within: 1 minute."
@@ -479,23 +526,20 @@
     "1 to 9" : {
       "comment" : "VoiceOver: keyboard keys 1 to 9."
     },
-    "1 – 9" : {
-      "comment" : "Keyboard keys 1 to 9, as printed."
-    },
-    "10 sec" : {
-      "comment" : "Photos taken within: 10 seconds."
-    },
-    "100% on-device" : {
-      "comment" : "Onboarding row title: everything stays on the device."
-    },
     "2 Weeks" : {
       "comment" : "Look back: the last 14 days."
     },
     "3 min" : {
       "comment" : "Photos taken within: 3 minutes."
     },
+    "10 sec" : {
+      "comment" : "Photos taken within: 10 seconds."
+    },
     "30 sec" : {
       "comment" : "Photos taken within: 30 seconds."
+    },
+    "100% on-device" : {
+      "comment" : "Onboarding row title: everything stays on the device."
     },
     "A long stretch of time can find many moments." : {
       "comment" : "Pick Dates: footer when the picked days span more than a year."
@@ -511,6 +555,9 @@
     },
     "About" : {
       "comment" : "Settings section header: about the app."
+    },
+    "about %@ to free up" : {
+      "comment" : "Adjust summary, second line: estimated space, for example 32 MB, when some sizes are unknown.\nVoiceOver: estimated space to free up, for example 4.2 MB."
     },
     "Adjust" : {
       "comment" : "Button that opens the Adjust sheet (how moments are found).\nEnd of the Moments list: opens Adjust (how moments are found).\nSettings section header: how moments are found (the same controls as the Adjust sheet).\nTitle of the sheet that changes how moments are found.\nToolbar button that opens Adjust (how moments are found)."
@@ -536,11 +583,11 @@
     "All time" : {
       "comment" : "All clean: heading for the lifetime totals."
     },
-    "Allow Photo Access" : {
-      "comment" : "Button that shows the iOS photo access prompt."
-    },
     "Allow access to your photos" : {
       "comment" : "Moments tab when photo access was never asked: title."
+    },
+    "Allow Photo Access" : {
+      "comment" : "Button that shows the iOS photo access prompt."
     },
     "Bigger moments" : {
       "comment" : "Help heading: how to make moments bigger."
@@ -557,14 +604,14 @@
     "Changes show up right away" : {
       "comment" : "What's New row title: Adjust updates the list at once."
     },
-    "Choose Photos" : {
-      "comment" : "Banner button that opens the system picker for the photos Pickr. can see."
-    },
     "Choose a moment" : {
       "comment" : "Kept, side by side: the detail column while no moment is open."
     },
     "Choose a moment in the list, or start at the top." : {
       "comment" : "Start view beside the Moments list when no moment is open."
+    },
+    "Choose Photos" : {
+      "comment" : "Banner button that opens the system picker for the photos Pickr. can see."
     },
     "Clean Up" : {
       "comment" : "Menu bar: the menu with the review commands."
@@ -645,29 +692,6 @@
     "Delete %lld" : {
       "comment" : "Review's main button, short form. 1: number of photos to delete."
     },
-    "Delete %lld Photos" : {
-      "comment" : "Bulk delete dialog: confirm. 1: number of photos.\nBulk-delete dialog: confirms. 1: number of photos.\nMenu bar: delete the photos that aren't kept. 1: number of photos.\nReview's main button. 1: number of photos to delete.",
-      "localizations" : {
-        "en" : {
-          "variations" : {
-            "plural" : {
-              "one" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Delete %lld Photo"
-                }
-              },
-              "other" : {
-                "stringUnit" : {
-                  "state" : "translated",
-                  "value" : "Delete %lld Photos"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "Delete %lld photos" : {
       "comment" : "VoiceOver label of Review's Delete button. 1: number of photos.",
       "localizations" : {
@@ -684,6 +708,29 @@
                 "stringUnit" : {
                   "state" : "translated",
                   "value" : "Delete %lld photos"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Delete %lld Photos" : {
+      "comment" : "Bulk delete dialog: confirm. 1: number of photos.\nBulk-delete dialog: confirms. 1: number of photos.\nMenu bar: delete the photos that aren't kept. 1: number of photos.\nReview's main button. 1: number of photos to delete.",
+      "localizations" : {
+        "en" : {
+          "variations" : {
+            "plural" : {
+              "one" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld Photo"
+                }
+              },
+              "other" : {
+                "stringUnit" : {
+                  "state" : "translated",
+                  "value" : "Delete %lld Photos"
                 }
               }
             }
@@ -740,12 +787,6 @@
     "Delete All" : {
       "comment" : "Moves the moment's photos to Recently Deleted (favorites are kept)."
     },
-    "Delete All…" : {
-      "comment" : "Review ⋯ menu: delete every photo of the moment (favorites are kept)."
-    },
-    "Delete Photos" : {
-      "comment" : "Menu bar: Delete, while no photo would be deleted (disabled)."
-    },
     "Delete all %lld photos in this moment?" : {
       "comment" : "Bulk delete dialog title (20 or more photos). 1: number of photos.\nDialog before deleting 20 or more photos at once. 1: number of photos.",
       "localizations" : {
@@ -769,8 +810,14 @@
         }
       }
     },
+    "Delete All…" : {
+      "comment" : "Review ⋯ menu: delete every photo of the moment (favorites are kept)."
+    },
     "Delete or skip, and the next one is ready." : {
       "comment" : "What's New row: after deleting or skipping, the next moment shows."
+    },
+    "Delete Photos" : {
+      "comment" : "Menu bar: Delete, while no photo would be deleted (disabled)."
     },
     "Delete the photos you didn't keep" : {
       "comment" : "Help: what Command-Delete does."
@@ -1041,6 +1088,9 @@
         }
       }
     },
+    "favorite" : {
+      "comment" : "VoiceOver: the photo is a favorite or rated (protected)."
+    },
     "Favorites are kept." : {
       "comment" : "Footnote under Delete All when the moment has favorites.\nUnder Delete All when the moment has protected favorites."
     },
@@ -1062,11 +1112,11 @@
     "Frees up to about %@" : {
       "comment" : "Under Clean Up 7 Moments, when some sizes are unknown. 1: estimated space, for example 32 MB."
     },
-    "Get Deleted Photos Back" : {
-      "comment" : "Settings row: opens the help about recovering photos from Recently Deleted."
-    },
     "Get deleted photos back" : {
       "comment" : "Help heading: recovering deleted photos."
+    },
+    "Get Deleted Photos Back" : {
+      "comment" : "Settings row: opens the help about recovering photos from Recently Deleted."
     },
     "Go back" : {
       "comment" : "Help: what the Escape key does."
@@ -1077,14 +1127,17 @@
     "Hides these moments." : {
       "comment" : "VoiceOver hint of the open Photos you picked header."
     },
-    "How Pickr. Finds Moments" : {
-      "comment" : "Adjust: link to the help page about how moments are found.\nSettings row: opens the help page about how moments are found.\nTitle of the help page about how moments are found."
-    },
     "How far back" : {
       "comment" : "Help heading: how far back Pickr. looks for moments."
     },
+    "How Pickr. Finds Moments" : {
+      "comment" : "Adjust: link to the help page about how moments are found.\nSettings row: opens the help page about how moments are found.\nTitle of the help page about how moments are found."
+    },
     "In All, drag sideways across photos to keep or unmark several at once. With a trackpad or mouse, point at a photo and click the circle to keep it, or secondary-click a moment or photo for more choices." : {
       "comment" : "Help: drag across photos, and pointer use."
+    },
+    "includes favorites" : {
+      "comment" : "VoiceOver: the moment has protected (favorite or rated) photos."
     },
     "It will show up in Moments again." : {
       "comment" : "VoiceOver hint of Show Moment Again. Also the toast after Show Again took a moment or a photo out of the Kept tab (shown with an Undo button): keep both the same."
@@ -1101,9 +1154,6 @@
     "Keep All & Next" : {
       "comment" : "Review's main button when every photo is kept: keep the moment and go on."
     },
-    "Keep Photo" : {
-      "comment" : "Menu bar: keep or unmark the current photo (Space)."
-    },
     "Keep all and go to the next moment" : {
       "comment" : "VoiceOver label of Keep All & Next."
     },
@@ -1113,8 +1163,14 @@
     "Keep or unmark the photo" : {
       "comment" : "Help: what the Space key does."
     },
+    "Keep Photo" : {
+      "comment" : "Menu bar: keep or unmark the current photo (Space)."
+    },
     "Keeps the photo." : {
       "comment" : "VoiceOver hint of a photo tile in Review."
+    },
+    "kept" : {
+      "comment" : "VoiceOver: the photo is marked to keep."
     },
     "Kept" : {
       "comment" : "Kept moment subtitle: the moment was kept with Keep All.\nMenu bar: show the Kept tab.\nOne by One: the photo is marked to keep.\nTab: the moments and photos you kept.\nTitle of the Kept tab."
@@ -1291,11 +1347,11 @@
     "Open Settings" : {
       "comment" : "Button that opens Pickr.'s page in the iOS Settings app.\nOpens the Settings app, where photo access can be turned on."
     },
-    "Opens Mail." : {
-      "comment" : "VoiceOver hint of Send Feedback."
-    },
     "Opens in your web browser." : {
       "comment" : "VoiceOver hint of a Settings row that opens a web page."
+    },
+    "Opens Mail." : {
+      "comment" : "VoiceOver hint of Send Feedback."
     },
     "Opens the moment so you can pick what to keep." : {
       "comment" : "VoiceOver hint on a moment card."
@@ -1455,21 +1511,6 @@
     "Show Again" : {
       "comment" : "Kept card swipe action: put this moment back in Moments.\nKept: put this moment back in Moments."
     },
-    "Show All Again" : {
-      "comment" : "Show All Again confirmation: the confirming button."
-    },
-    "Show All Again…" : {
-      "comment" : "Kept ⋯ menu: put every kept moment back in Moments (asks first)."
-    },
-    "Show Moment Again" : {
-      "comment" : "Kept moment: put every photo of this moment back in Moments."
-    },
-    "Show Photo Again" : {
-      "comment" : "Kept moment: put the photo shown back in Moments.\nKept moment: put this photo back in Moments."
-    },
-    "Show Tips Again" : {
-      "comment" : "Settings button: the hints show again."
-    },
     "Show all %lld moments in Moments again?" : {
       "comment" : "Show All Again confirmation title. 1: the number of kept moments.",
       "localizations" : {
@@ -1492,6 +1533,21 @@
           }
         }
       }
+    },
+    "Show All Again" : {
+      "comment" : "Show All Again confirmation: the confirming button."
+    },
+    "Show All Again…" : {
+      "comment" : "Kept ⋯ menu: put every kept moment back in Moments (asks first)."
+    },
+    "Show Moment Again" : {
+      "comment" : "Kept moment: put every photo of this moment back in Moments."
+    },
+    "Show Photo Again" : {
+      "comment" : "Kept moment: put the photo shown back in Moments.\nKept moment: put this photo back in Moments."
+    },
+    "Show Tips Again" : {
+      "comment" : "Settings button: the hints show again."
     },
     "Shows the iOS question about photo access." : {
       "comment" : "VoiceOver hint of Allow Photo Access in onboarding."
@@ -1647,66 +1703,6 @@
     },
     "Your progress" : {
       "comment" : "Settings section header: lifetime numbers."
-    },
-    "about %@ to free up" : {
-      "comment" : "Adjust summary, second line: estimated space, for example 32 MB, when some sizes are unknown.\nVoiceOver: estimated space to free up, for example 4.2 MB."
-    },
-    "favorite" : {
-      "comment" : "VoiceOver: the photo is a favorite or rated (protected)."
-    },
-    "includes favorites" : {
-      "comment" : "VoiceOver: the moment has protected (favorite or rated) photos."
-    },
-    "kept" : {
-      "comment" : "VoiceOver: the photo is marked to keep."
-    },
-    "← →" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌘," : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌘1  ⌘2" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌘A" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌘K" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌘R" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌘Z" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌘↑" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌘↓" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌘⌫" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌥⌘1  ⌥⌘2" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
-    },
-    "⌥⌘A" : {
-      "comment" : "A keyboard shortcut as printed in menus and on keys.",
-      "shouldTranslate" : false
     }
   },
   "version" : "1.0"
