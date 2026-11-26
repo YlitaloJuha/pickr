@@ -11,6 +11,7 @@ exclude:
   - test-photos
   - docs
   - images/icon-source
+  - images/appstore
   - CLAUDE.md
   - project.yml
   - LICENSE
